@@ -1,0 +1,80 @@
+8
+
+dir
+133
+http://bushel.googlecode.com/svn/trunk/java/src/com/googlecode/bushel/ivy
+http://bushel.googlecode.com/svn
+
+
+
+2009-10-18T16:19:20.813361Z
+123
+nicolas.lalevee@hibnet.org
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+445ac227-4053-0410-b087-cdb4311f96db
+
+BushelRevisionStrategy.java
+file
+
+
+
+
+2012-03-29T20:19:45.000000Z
+0198a351570d8f65e3938156c9bd1e44
+2009-08-23T16:20:41.366003Z
+111
+alex.radeski
+
+BushelFileResolver.java
+file
+
+
+
+
+2012-03-29T20:19:45.000000Z
+7a487b53a00c69775c467b29ea879fb8
+2009-08-23T16:20:41.366003Z
+111
+alex.radeski
+
+BushelManifestParser.java
+file
+
+
+
+
+2012-03-29T20:19:45.000000Z
+7a7753d63bfc5b50738fbc5eaa410be6
+2009-10-18T16:19:20.813361Z
+123
+nicolas.lalevee@hibnet.org
+
+BushelIvyParser.java
+file
+
+
+
+
+2012-03-29T20:19:45.000000Z
+d98e6d4dfa856fd5634999ae1681a1c0
+2009-08-23T16:20:41.366003Z
+111
+alex.radeski
+has-props
+
+internal
+dir
+

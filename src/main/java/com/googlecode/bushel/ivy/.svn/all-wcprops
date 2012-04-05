@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/123/trunk/java/src/com/googlecode/bushel/ivy
+END
+BushelRevisionStrategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/111/trunk/java/src/com/googlecode/bushel/ivy/BushelRevisionStrategy.java
+END
+BushelFileResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/111/trunk/java/src/com/googlecode/bushel/ivy/BushelFileResolver.java
+END
+BushelManifestParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/123/trunk/java/src/com/googlecode/bushel/ivy/BushelManifestParser.java
+END
+BushelIvyParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/111/trunk/java/src/com/googlecode/bushel/ivy/BushelIvyParser.java
+END

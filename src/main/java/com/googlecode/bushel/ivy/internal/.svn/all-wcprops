@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/111/trunk/java/src/com/googlecode/bushel/ivy/internal
+END
+PackageRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/111/trunk/java/src/com/googlecode/bushel/ivy/internal/PackageRegistry.java
+END
+FilePackageScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/79/trunk/java/src/com/googlecode/bushel/ivy/internal/FilePackageScanner.java
+END
+JarEntryResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/79/trunk/java/src/com/googlecode/bushel/ivy/internal/JarEntryResource.java
+END
+RepositoryJarHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/79/trunk/java/src/com/googlecode/bushel/ivy/internal/RepositoryJarHandler.java
+END
+JarFileRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/79/trunk/java/src/com/googlecode/bushel/ivy/internal/JarFileRepository.java
+END

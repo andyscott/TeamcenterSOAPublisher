@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/core
+END
+ManifestParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/123/trunk/java/src/com/googlecode/bushel/core/ManifestParser.java
+END
+BundleInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/core/BundleInfo.java
+END
+ManifestHeaderElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/71/trunk/java/src/com/googlecode/bushel/core/ManifestHeaderElement.java
+END
+BundleRequirement.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/123/trunk/java/src/com/googlecode/bushel/core/BundleRequirement.java
+END
+BundleCapability.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/123/trunk/java/src/com/googlecode/bushel/core/BundleCapability.java
+END
+ManifestHeaderValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/91/trunk/java/src/com/googlecode/bushel/core/ManifestHeaderValue.java
+END
+ExportPackage.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/123/trunk/java/src/com/googlecode/bushel/core/ExportPackage.java
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo
+END
+BundleRepo.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/BundleRepo.java
+END
+ResolverManifestIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/ResolverManifestIterable.java
+END
+BundleRepoResolver.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/BundleRepoResolver.java
+END
+ManifestAndLocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/ManifestAndLocation.java
+END
+ManifestMDParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/ManifestMDParser.java
+END
+BundleInfoAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/BundleInfoAdapter.java
+END
+BundleCapabilityAndLocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/BundleCapabilityAndLocation.java
+END
+FSManifestIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/FSManifestIterable.java
+END
+ExecutionEnvironmentProfile.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/82/trunk/java/src/com/googlecode/bushel/repo/ExecutionEnvironmentProfile.java
+END
+AbstractFSManifestIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/repo/AbstractFSManifestIterable.java
+END
+RepositoryManifestIterable.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/81/trunk/java/src/com/googlecode/bushel/repo/RepositoryManifestIterable.java
+END
+RelativeURLRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/110/trunk/java/src/com/googlecode/bushel/repo/RelativeURLRepository.java
+END

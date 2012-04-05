@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/util
+END
+ZipUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/71/trunk/java/src/com/googlecode/bushel/util/ZipUtil.java
+END
+ArtifactTokens.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/74/trunk/java/src/com/googlecode/bushel/util/ArtifactTokens.java
+END
+VersionRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/85/trunk/java/src/com/googlecode/bushel/util/VersionRange.java
+END
+Version.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/75/trunk/java/src/com/googlecode/bushel/util/Version.java
+END
+DelegetingHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/124/trunk/java/src/com/googlecode/bushel/util/DelegetingHandler.java
+END
+ParseUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/54/trunk/java/src/com/googlecode/bushel/util/ParseUtil.java
+END
+VersionComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/75/trunk/java/src/com/googlecode/bushel/util/VersionComparator.java
+END
+NameUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/71/trunk/java/src/com/googlecode/bushel/util/NameUtil.java
+END
