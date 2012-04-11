@@ -1,5 +1,5 @@
 <ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
-  <info organisation="com.intercax" module="osg2ivy"/>
+  <info organisation="xt.to.cs" module="tcpub"/>
   
   <configurations>
     <include file="${ivy.settings.dir}/ivy_configurations.xml"/>

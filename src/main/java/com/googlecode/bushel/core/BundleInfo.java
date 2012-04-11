@@ -47,6 +47,8 @@ public class BundleInfo {
     private Set<BundleRequirement> requirements = new LinkedHashSet<BundleRequirement>();
 
     private Set<BundleCapability> capabilities = new LinkedHashSet<BundleCapability>();
+    
+    private Set<BundleClasspath> classpaths = new LinkedHashSet<BundleClasspath>();
 
     private List<String> executionEnvironments = Collections.emptyList();
 
@@ -72,6 +74,8 @@ public class BundleInfo {
         builder.append(executionEnvironments);
         builder.append(", capabilities=");
         builder.append(capabilities);
+        builder.append(", classpaths=");
+        builder.append(classpaths);
         builder.append(", requirements=");
         builder.append(requirements);
         builder.append(", symbolicName=");
@@ -165,6 +169,14 @@ public class BundleInfo {
     public Set<BundleCapability> getCapabilities() {
         return capabilities;
     }
+    
+    public void addClasspath(BundleClasspath classpath) {
+      classpaths.add(classpath);
+    }
+
+    public Set<BundleClasspath> getClasspaths() {
+        return classpaths;
+    }
 
     public List<String> getExecutionEnvironments() {
         return executionEnvironments;
@@ -180,6 +192,7 @@ public class BundleInfo {
         int result = 1;
         result = prime * result + ((capabilities == null) ? 0 : capabilities.hashCode());
         result = prime * result + ((requirements == null) ? 0 : requirements.hashCode());
+        result = prime * result + ((classpaths == null) ? 0 : classpaths.hashCode());
         result = prime * result + ((symbolicName == null) ? 0 : symbolicName.hashCode());
         result = prime * result + ((version == null) ? 0 : version.hashCode());
         result = prime * result + ((executionEnvironments == null) ? 0 : executionEnvironments.hashCode());
@@ -203,6 +216,13 @@ public class BundleInfo {
                 return false;
             }
         } else if (!capabilities.equals(other.capabilities)) {
+            return false;
+        }
+        if (classpaths == null) {
+          if (other.classpaths != null) {
+              return false;
+          }
+        } else if (!classpaths.equals(other.classpaths)) {
             return false;
         }
         if (requirements == null) {

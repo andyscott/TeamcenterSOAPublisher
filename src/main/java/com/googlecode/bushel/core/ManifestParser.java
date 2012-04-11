@@ -45,6 +45,7 @@ public class ManifestParser {
     private static final String BUNDLE_SYMBOLIC_NAME = "Bundle-SymbolicName";
     private static final String BUNDLE_MANIFEST_VERSION = "Bundle-ManifestVersion";
     private static final String BUNDLE_REQUIRED_EXECUTION_ENVIRONMENT = "Bundle-RequiredExecutionEnvironment";
+    private static final String BUNDLE_CLASSPATH = "Bundle-ClassPath";
 
     private static final String ATTR_RESOLUTION = "resolution";
     private static final String ATTR_VERSION = "version";
@@ -110,6 +111,8 @@ public class ManifestParser {
         parseRequirement(bundleInfo, mainAttributes, REQUIRE_BUNDLE, BundleInfo.BUNDLE_TYPE, ATTR_BUNDLE_VERSION);
         parseRequirement(bundleInfo, mainAttributes, IMPORT_PACKAGE, BundleInfo.PACKAGE_TYPE, ATTR_VERSION);
         parseRequirement(bundleInfo, mainAttributes, IMPORT_SERVICE, BundleInfo.SERVICE_TYPE, ATTR_VERSION);
+        
+        parseClasspaths(bundleInfo, mainAttributes, BUNDLE_CLASSPATH);
 
         ManifestHeaderValue exportElements = new ManifestHeaderValue(mainAttributes.getValue(EXPORT_PACKAGE));
         for (ManifestHeaderElement exportElement : exportElements.getElements()) {
@@ -180,6 +183,19 @@ public class ManifestParser {
         }
 
     }
+    
+    private static void parseClasspaths(BundleInfo bundleInfo, Attributes mainAttributes, String headerName)
+        throws ParseException {
+    ManifestHeaderValue elements = new ManifestHeaderValue(mainAttributes.getValue(headerName));
+    for (ManifestHeaderElement element : elements.getElements()) {
+
+        for (String name : element.getValues()) {
+            BundleClasspath classpath = new BundleClasspath(name);
+            bundleInfo.addClasspath(classpath);
+        }
+    }
+
+}
 
     private static VersionRange versionRangeOf(String v) throws ParseException {
         if (v == null) {

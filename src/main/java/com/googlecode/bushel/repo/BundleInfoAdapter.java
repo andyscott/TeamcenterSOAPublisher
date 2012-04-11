@@ -39,9 +39,11 @@ import org.apache.ivy.plugins.matcher.PatternMatcher;
 import org.apache.ivy.util.Message;
 import org.apache.ivy.util.StringUtils;
 
+import com.googlecode.bushel.core.BundleClasspath;
 import com.googlecode.bushel.core.BundleInfo;
 import com.googlecode.bushel.core.BundleRequirement;
 import com.googlecode.bushel.core.ExportPackage;
+import com.googlecode.bushel.ivy.RemapInfo;
 import com.googlecode.bushel.repo.osgi.ExecutionEnvironmentProfileProvider;
 import com.googlecode.bushel.util.Version;
 import com.googlecode.bushel.util.VersionRange;
@@ -76,7 +78,7 @@ public class BundleInfoAdapter {
             BundleInfo.SERVICE_TYPE);
 
     public static DefaultModuleDescriptor toModuleDescriptor(String org, BundleInfo bundle,
-            ExecutionEnvironmentProfileProvider profileProvider) throws ProfileNotFoundException {
+            ExecutionEnvironmentProfileProvider profileProvider, Map<String, RemapInfo> remaps) throws ProfileNotFoundException {
         DefaultModuleDescriptor md = new DefaultModuleDescriptor(null, null);
         ModuleRevisionId mrid = asMrid(org, bundle.getSymbolicName(), bundle.getVersion(), null);
         md.setResolvedPublicationDate(new Date());
@@ -99,9 +101,19 @@ public class BundleInfoAdapter {
                     "Exported package " + exportPackage.getName(), confDependencies, true, null));
         }
 
-        requirementAsDependency(org, md, bundle, exportedPkgNames);
+        requirementAsDependency(org, md, bundle, exportedPkgNames, remaps);
 
-        if (bundle.getUri() != null) {
+        boolean hasExternalClasspath = false;
+        for (BundleClasspath bcp : bundle.getClasspaths()) {
+          String name = bcp.getName();
+          if (!name.endsWith(".jar"))
+            continue;
+          hasExternalClasspath = true;
+          DefaultArtifact artifact = new DefaultArtifact(mrid, null, name.substring(0, name.length() - 4), "jar", "jar", null, null);
+          md.addArtifact(CONF_NAME_DEFAULT, artifact);
+        }
+
+        if (!hasExternalClasspath && bundle.getUri() != null) {
             DefaultArtifact artifact = null;
             String uri = bundle.getUri();
             if (uri.startsWith("ivy://")) {
@@ -233,19 +245,32 @@ public class BundleInfoAdapter {
         return artifact;
     }
 
-    private static void requirementAsDependency(String org, DefaultModuleDescriptor md, BundleInfo bundleInfo,
-            Set<String> exportedPkgNames) {
+    private static void requirementAsDependency(String defaultOrg, DefaultModuleDescriptor md, BundleInfo bundleInfo,
+            Set<String> exportedPkgNames, Map<String, RemapInfo> remaps) {
         for (BundleRequirement requirement : bundleInfo.getRequirements()) {
             String type = requirement.getType();
             String name = requirement.getName();
+            String rev = md.getModuleRevisionId().getRevision();
+            String org = defaultOrg;
 
             if (type.equals(BundleInfo.PACKAGE_TYPE) && exportedPkgNames.contains(name)) {
                 // don't declare package exported by the current bundle
                 continue;
             }
-
+            
+            if (remaps != null) {
+              RemapInfo remap = remaps.get(name);
+              if (remap != null) {
+                name = remap.getName();
+                if (name == null)
+                  continue;
+                org = remap.getOrg();
+                rev = remap.getRev();
+              }
+            }
+            
             //Map<String, String> osgiAtt = Collections.singletonMap(EXTRA_ATTRIBUTE_NAME, type);
-            ModuleRevisionId ddmrid = asMrid(org, name, requirement.getVersion(), md.getModuleRevisionId().getRevision(), null);
+            ModuleRevisionId ddmrid = asMrid(org, name, requirement.getVersion(), rev, null);
             DefaultDependencyDescriptor dd = new DefaultDependencyDescriptor(ddmrid, false);
 
             String conf = CONF_NAME_DEFAULT;
